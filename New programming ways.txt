@@ -1,0 +1,17 @@
+
+#For gui layout, the format must be in list of lists
+layout = [[f'{row}, {col}' for col in range(4)] for row in range(4)]
+print(layout)
+:
+[['0, 0', '0, 1', '0, 2', '0, 3'], ['1, 0', '1, 1', '1, 2', '1, 3'], ['2, 0', '2, 1', '2, 2', '2, 3'], ['3, 0', '3, 1', '3, 2', '3, 3']]
+
+#and then i can loop through the text using this way 
+[temp.append((x,y)) for x in range(4) for y in range(4)] OR
+temp = [(x,y) for x in range(4) for y in range(4)]
+print(temp)
+:
+[(0, 0), (0, 1), (0, 2), (0, 3), (1, 0), (1, 1), (1, 2), (1, 3), (2, 0), (2, 1), (2, 2), (2, 3), (3, 0), (3, 1), (3, 2), (3, 3)]
+
+
+#if variable is initialized before a loop (while), then the variable no need to be global. But if the variable is initialized outside of a function, 
+and the variable wants to be used in the function, then it needs to call global. For example, setter method.
